@@ -1,6 +1,5 @@
 "use client";
 
-import { Socials } from "@/constants";
 import Image from "next/image";
 import React from "react";
 import BoltIcon from "@mui/icons-material/Bolt";
