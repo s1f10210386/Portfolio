@@ -10,12 +10,6 @@
   z-index: 20;
 }
 
-@media screen and (max-width: 824px) {
-  .heroContentContainer {
-    flex-direction: column; /* 垂直方向に変更 */
-  }
-}
-
 .heroContentTextContainer {
   display: flex;
   flex-direction: column;
@@ -66,4 +60,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*パソコン画面半分　スマホ用*/
+@media screen and (max-width: 1224px) {
+  .heroContentContainer {
+    flex-direction: column; /* 垂直方向に変更 */
+    align-items: center; /* 子要素を中央に配置 */
+  }
+
+  .heroContentTitle {
+    margin-left: 0px;
+  }
+  .heroContentTextContainer {
+    align-items: center; /* 垂直方向の中央揃え */
+  }
+
+  .heroContentTitle {
+    text-align: center;
+  }
+
+  .heroContentDescription {
+    text-align: center;
+    margin-left: 10px;
+  }
+}
+
+/*スマホ用*/
+@media screen and (max-width: 600px) {
+  .heroContentTitle {
+    font-size: 34px;
+    margin-left: 0px;
+  }
 }

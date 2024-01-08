@@ -44,7 +44,7 @@ const HeroContent = () => {
           variants={slideInFromLeft(1)}
           className={styles.heroContentButton}
         >
-          Learn More!
+          詳しく見る
         </motion.a>
       </div>
 
