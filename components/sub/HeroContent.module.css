@@ -10,6 +10,12 @@
   z-index: 20;
 }
 
+@media screen and (max-width: 824px) {
+  .heroContentContainer {
+    flex-direction: column; /* 垂直方向に変更 */
+  }
+}
+
 .heroContentTextContainer {
   display: flex;
   flex-direction: column;
@@ -26,7 +32,7 @@
   gap: 1.5rem; /* Tailwindのgap-6に相当 */
   margin-top: 60px; /* Tailwindのmt-6に相当 */
   margin-left: 80px;
-  font-size: 3.75rem; /* Tailwindのtext-6xlに相当 */
+  font-size: 60px; /* Tailwindのtext-6xlに相当 */
   font-weight: bold;
   color: white;
   max-width: 600px;
