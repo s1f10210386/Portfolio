@@ -45,7 +45,7 @@ const HeroContent = () => {
           className={styles.heroContentButton}
           href="#introduction"
         >
-          詳しく見る
+          詳しくはコチラ
         </motion.a>
       </div>
 

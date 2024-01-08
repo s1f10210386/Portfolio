@@ -1,30 +1,25 @@
 import React from "react";
-import {
-  RxDiscordLogo,
-  RxGithubLogo,
-  RxInstagramLogo,
-  RxTwitterLogo,
-  RxLinkedinLogo,
-} from "react-icons/rx";
-
-import { FaYoutube } from "react-icons/fa";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import { Icon, IconButton } from "@mui/material";
 
 const Footer = () => {
   return (
     <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] ">
-      <div className="w-full flex flex-col items-center justify-center m-auto">
-        <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
-          <div className="min-w-[200px] h-auto flex flex-col items-center justify-start"></div>
-          <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-            <p className="flex flex-row items-center my-[15px] cursor-pointer">
-              <RxGithubLogo />
-            </p>
-          </div>
-        </div>
+      {/* GitHubアイコンを中央上部に配置 */}
+      <div className="flex justify-center">
+        <a
+          href="https://github.com/s1f10210386"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IconButton color="primary">
+            <GitHubIcon />
+          </IconButton>
+        </a>
+      </div>
 
-        <div className="mb-[20px] text-[15px] text-center">
-          &copy; WebChain Dev 2023 Inc. All rights reserved
-        </div>
+      <div className="mb-[20px] text-[15px] text-center ">
+        &copy; hotaka 2024 Inc. All rights reserved
       </div>
     </div>
   );

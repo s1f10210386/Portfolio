@@ -46,6 +46,7 @@
 .heroContentButton {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  margin-left: 10px;
   text-align: center;
   color: white;
   cursor: pointer;

@@ -1,47 +1,95 @@
+"use client";
+
 import { Socials } from "@/constants";
 import Image from "next/image";
 import React from "react";
 import BoltIcon from "@mui/icons-material/Bolt";
 import HomeIcon from "@mui/icons-material/Home";
+import InfoIcon from "@mui/icons-material/Info";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import { Icon, IconButton, useTheme } from "@mui/material";
 
 const Navbar = () => {
+  const [value, setValue] = React.useState(0);
+  const theme = useTheme();
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
+
   return (
-    <div className="w-full h-[60px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
+    <div className="w-full h-[60px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 ">
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
-        <a
-          href="#about-me"
-          className="h-auto w-auto flex flex-row items-center"
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="icon tabs example"
+          className="w-full md:w-auto"
         >
-          <span className="font-bold ml-[10px] hidden md:block text-gray-300">
-            ARMAP-Connect
-          </span>
+          <Tab
+            className="px-1 md:px-3"
+            icon={<HomeIcon />}
+            aria-label="home"
+            href="#home"
+            style={{
+              color: value === 0 ? "#4fc3f7" : theme.palette.primary.main,
+            }}
+          />
+          <Tab
+            className="px-1 md:px-3"
+            icon={<InfoIcon />}
+            aria-label="info"
+            href="#introduction"
+            style={{
+              color: value === 1 ? "#4fc3f7" : theme.palette.primary.main,
+            }}
+          />
+          <Tab
+            className="px-1 md:px-3"
+            icon={<BoltIcon />}
+            aria-label="bolt"
+            href="#skills"
+            style={{
+              color: value === 2 ? "#4fc3f7" : theme.palette.primary.main,
+            }}
+          />
+        </Tabs>
+
+        <a
+          href="#home"
+          className="h-auto w-auto flex flex-row items-center mr-20"
+        >
+          <Image
+            src="/images/logo.png"
+            alt="logo"
+            width={80}
+            height={60}
+            className="font-bold mr-21  hidden md:block text-gray-300"
+          />
         </a>
 
-        <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-            <a href="#home" className="cursor-pointer">
-              <HomeIcon />
-            </a>
-            <a href="#introduction" className="cursor-pointer">
-              Introduction
-            </a>
-            <a href="#skills" className="cursor-pointer">
-              <BoltIcon />
-            </a>
-          </div>
+        <div className="flex flex-row  mr-0.5">
+          <a
+            href="https://github.com/s1f10210386"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconButton color="primary">
+              <GitHubIcon />
+            </IconButton>
+          </a>
+          <a
+            href="https://twitter.com/ladohada386"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconButton color="primary">
+              <TwitterIcon sx={{ marginRight: "2px" }} />
+            </IconButton>
+          </a>
         </div>
-
-        {/* <div className="flex flex-row gap-5">
-          {Socials.map((social) => (
-            <Image
-              src={social.src}
-              alt={social.name}
-              key={social.name}
-              width={24}
-              height={24}
-            />
-          ))}
-        </div> */}
       </div>
     </div>
   );
