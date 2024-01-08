@@ -1,4 +1,4 @@
-import { Backend_skill, Frontend_skill } from "@/constants";
+import { Backend_skill, Database, Frontend_skill, Other } from "@/constants";
 import React from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
 import SkillText from "../sub/SkillText";
@@ -39,8 +39,35 @@ const Skills = () => {
           />
         ))}
       </div>
+
+      <div className="text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]">
+        データベース
+      </div>
+      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+        {Database.map((image, index) => (
+          <SkillDataProvider
+            key={index}
+            src={image.Image}
+            width={image.width}
+            height={image.height}
+            index={index}
+          />
+        ))}
+      </div>
+
       <div className="text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]">
         その他
+      </div>
+      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+        {Other.map((image, index) => (
+          <SkillDataProvider
+            key={index}
+            src={image.Image}
+            width={image.width}
+            height={image.height}
+            index={index}
+          />
+        ))}
       </div>
     </section>
   );

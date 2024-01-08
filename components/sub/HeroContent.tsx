@@ -16,7 +16,7 @@ const HeroContent = () => {
       initial="hidden"
       animate="visible"
       className={styles.heroContentContainer}
-      id="about-me"
+      id="home"
     >
       <div className={styles.heroContentTextContainer}>
         <motion.div

@@ -1,18 +1,5 @@
 export const Frontend_skill = [
   {
-    skill_name: "Html 5",
-    Image: "/html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Css",
-    Image: "/css.png",
-    width: 80,
-    height: 80,
-  },
-
-  {
     skill_name: "Material UI",
     Image: "/mui.png",
     width: 80,
@@ -37,8 +24,14 @@ export const Frontend_skill = [
     height: 80,
   },
   {
-    skill_name: "Node js",
-    Image: "/node-js.png",
+    skill_name: "ARjs",
+    Image: "/images/arjs.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "Openstreetmap",
+    Image: "/images/openstreetmap.png",
     width: 80,
     height: 80,
   },
@@ -46,10 +39,37 @@ export const Frontend_skill = [
 
 export const Backend_skill = [
   {
-    skill_name: "Fire base",
-    Image: "/Firebase.png",
-    width: 55,
-    height: 55,
+    skill_name: "Prisma",
+    Image: "/prisma.webp",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Next js 13",
+    Image: "/next.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "Frourio",
+    Image: "/images/frourio.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "Node js",
+    Image: "/node-js.png",
+    width: 80,
+    height: 80,
+  },
+];
+
+export const Database = [
+  {
+    skill_name: "Prisma",
+    Image: "/prisma.webp",
+    width: 70,
+    height: 70,
   },
   {
     skill_name: "Postger SQL",
@@ -58,17 +78,25 @@ export const Backend_skill = [
     height: 70,
   },
   {
-    skill_name: "Prisma",
-    Image: "/prisma.webp",
-    width: 70,
-    height: 70,
+    skill_name: "Supabase",
+    Image: "/images/supabase.png",
+    width: 80,
+    height: 80,
   },
+];
 
+export const Other = [
   {
     skill_name: "Docker",
     Image: "/docker.webp",
     width: 70,
     height: 70,
+  },
+  {
+    skill_name: "Fire base",
+    Image: "/Firebase.png",
+    width: 55,
+    height: 55,
   },
 ];
 
