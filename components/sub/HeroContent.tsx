@@ -43,6 +43,7 @@ const HeroContent = () => {
         <motion.a
           variants={slideInFromLeft(1)}
           className={styles.heroContentButton}
+          href="#introduction"
         >
           詳しく見る
         </motion.a>
